@@ -17,6 +17,8 @@ public class PaymentResultListener {
 
     @KafkaListener(topics = Topics.PAYMENT_RESULT, groupId = "orders")
     public void onPaymentResult(PaymentResultMessage result) {
-        orderService.paymentResult(result);
+        if (result.paid()) {
+            orderService.paymentResult(result);
+        }
     }
 }
