@@ -16,7 +16,7 @@ public class StripePaymentProvider implements PaymentProvider {
         try {
             PaymentIntent intent = PaymentIntent.create(PaymentIntentCreateParams.builder()
                 .setAmount(amount.movePointRight(2).longValueExact())
-                .setCurrency(currency.toLowerCase())
+                .setCurrency(currency)
                 .setReceiptEmail(customerEmail)
                 .setConfirm(true)
                 .build());
