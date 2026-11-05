@@ -4,7 +4,7 @@
       <tr><th>Product</th><th>SKU</th><th>Qty</th><th>Unit price</th><th>Line total</th></tr>
     </thead>
     <tbody>
-      <tr v-for="line in lines" :key="line.sku">
+      <tr v-for="line in items" :key="line.sku">
         <td>{{ line.productName }}</td>
         <td>{{ line.sku }}</td>
         <td>{{ line.quantity }}</td>
@@ -19,5 +19,5 @@
 import MoneyText from './MoneyText.vue';
 import type { OrderLine } from '../types';
 
-defineProps<{ lines: OrderLine[] }>();
+defineProps<{ items: OrderLine[] }>();
 </script>
