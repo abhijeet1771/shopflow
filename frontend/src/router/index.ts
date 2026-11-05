@@ -17,10 +17,5 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to) => {
-  if (to.meta.requiresAdmin && !isAdmin()) {
-    return { name: 'home' };
-  }
-});
 
 export default router;
