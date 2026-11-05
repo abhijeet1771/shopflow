@@ -19,7 +19,7 @@ export const useCartStore = defineStore('cart', () => {
     if (existing) {
       existing.quantity += 1;
     } else {
-      lines.value.push({ sku: product.sku, name: product.name, price: product.price, quantity: 1 });
+      lines.value.push({ sku: product.sku, name: product.name, price: product.unitPrice, quantity: 1 });
     }
   }
 

@@ -41,7 +41,7 @@ export interface Product {
   sku: string;
   name: string;
   description: string | null;
-  price: number;
+  unitPrice: number;
   stock: number;
   inStock: boolean;
 }

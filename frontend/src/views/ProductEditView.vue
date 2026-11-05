@@ -28,7 +28,7 @@ onMounted(async () => {
   const p = await productsApi.get(sku);
   form.name = p.name;
   form.description = p.description;
-  form.price = p.price;
+  form.price = p.unitPrice;
   form.stock = p.stock;
 });
 

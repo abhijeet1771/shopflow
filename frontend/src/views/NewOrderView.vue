@@ -4,7 +4,7 @@
     <div class="products">
       <div v-for="p in products" :key="p.sku" class="product">
         <span>{{ p.name }}</span>
-        <MoneyText :amount="p.price" />
+        <MoneyText :amount="p.unitPrice" />
         <button :disabled="!p.inStock" @click="cart.add(p)">Add</button>
       </div>
     </div>

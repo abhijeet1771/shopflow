@@ -9,7 +9,7 @@
         <tr v-for="p in products" :key="p.sku">
           <td>{{ p.name }}</td>
           <td>{{ p.sku }}</td>
-          <td><MoneyText :amount="p.price" /></td>
+          <td><MoneyText :amount="p.unitPrice" /></td>
           <td>
             <span v-if="p.inStock">{{ p.stock }}</span>
             <span v-else class="badge muted">Sold out</span>
