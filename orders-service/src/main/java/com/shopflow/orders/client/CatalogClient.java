@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "catalog-service")
 public interface CatalogClient {
 
-    @GetMapping("/products/{sku}")
+    @GetMapping("/products/by-sku/{sku}")
     ProductView product(@PathVariable("sku") String sku);
 }
