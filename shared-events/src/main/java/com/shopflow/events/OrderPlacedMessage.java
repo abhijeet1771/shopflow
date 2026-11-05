@@ -8,7 +8,7 @@ public record OrderPlacedMessage(
     Long orderId,
     String customerEmail,
     String customerName,
-    BigDecimal total,
+    BigDecimal amount,
     String currency,
     List<Line> lines
 ) {
