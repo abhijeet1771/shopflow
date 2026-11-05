@@ -11,7 +11,7 @@ spring:
       properties:
         spring.json.trusted.packages: com.shopflow.events
   mail:
-    host: smtp.shopflow.example
+    host: mail.shopflow.example
     port: 587
 shopflow:
   topics:
