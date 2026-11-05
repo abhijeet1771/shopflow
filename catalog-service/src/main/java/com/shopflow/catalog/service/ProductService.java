@@ -28,7 +28,7 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public Product bySku(String sku) {
-        return productRepository.findBySku(sku).orElseThrow(() -> new NoSuchElementException(sku));
+        return productRepository.findBySku(sku.toUpperCase()).orElseThrow(() -> new NoSuchElementException(sku));
     }
 
     public Product update(String sku, ProductUpdateRequest request) {
