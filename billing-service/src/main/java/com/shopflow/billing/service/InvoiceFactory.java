@@ -19,7 +19,7 @@ public class InvoiceFactory {
     }
 
     public Invoice from(OrderPlacedMessage order) {
-        BigDecimal net = order.total();
+        BigDecimal net = order.amount();
         BigDecimal tax = net.multiply(taxRate).setScale(2, RoundingMode.HALF_UP);
         return Invoice.builder()
             .orderId(order.orderId())

@@ -29,7 +29,7 @@ public class Mailer {
     @Async
     public void orderConfirmation(OrderPlacedMessage order) {
         String subject = "Your ShopFlow order " + order.orderId();
-        String body = "Hello " + order.customerName() + ",\n\nthank you for your order. The total is " + order.total() + " " + order.currency() + ".";
+        String body = "Hello " + order.customerName() + ",\n\nthank you for your order. The total is " + order.amount() + " " + order.currency() + ".";
         send(order.orderId(), order.customerEmail(), "ORDER_CONFIRMATION", subject, body);
     }
 
