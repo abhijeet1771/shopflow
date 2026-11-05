@@ -10,7 +10,7 @@ const props = defineProps<{ status: string }>();
 const TONES: Record<string, string> = {
   PLACED: 'info',
   PAID: 'success',
-  PAYMENT_FAILED: 'danger',
+  PAYMENT_FAILED: 'warning',
   CANCELLED: 'muted',
   SHIPPED: 'primary',
   OPEN: 'info',
