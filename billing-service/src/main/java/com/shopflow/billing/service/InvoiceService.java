@@ -37,7 +37,7 @@ public class InvoiceService {
         PaymentOutcome outcome = paymentProvider.charge(invoice.getCustomerEmail(), invoice.getGross(), invoice.getCurrency());
         invoice.setStatus(outcome.success() ? InvoiceStatus.PAID : InvoiceStatus.FAILED);
         invoice.setPaymentReference(outcome.reference());
-        results.publish(new PaymentResultMessage(order.orderId(), invoice.getId(), outcome.success(), outcome.failureReason()));
+        results.publish(new PaymentResultMessage(order.orderId(), invoice.getId(), outcome.success(), outcome.reference()));
         return invoice;
     }
 
