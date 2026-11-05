@@ -11,7 +11,7 @@ spring:
       group-id: billing
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: com.shopflow.events
+        spring.json.trusted.packages: com.shopflow.event
 billing:
   provider: stripe
   tax-rate: 0.19
