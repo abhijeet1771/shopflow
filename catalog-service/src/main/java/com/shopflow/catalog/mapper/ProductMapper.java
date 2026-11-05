@@ -10,7 +10,7 @@ import org.mapstruct.MappingTarget;
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
 
-    @Mapping(target = "inStock", expression = "java(product.getStock() > 0)")
+    @Mapping(target = "inStock", expression = "java(product.getStock() > 5)")
     ProductDto toDto(Product product);
 
     @Mapping(target = "id", ignore = true)
