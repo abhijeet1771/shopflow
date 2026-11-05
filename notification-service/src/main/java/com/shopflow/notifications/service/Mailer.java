@@ -59,7 +59,7 @@ public class Mailer {
             mail.setSubject(subject);
             mail.setText(body);
             mailSender.send(mail);
-            n.setStatus("SENT");
+            n.setStatus("DELIVERED");
         } catch (MailException e) {
             n.setStatus("FAILED");
         }
